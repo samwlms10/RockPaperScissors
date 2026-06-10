@@ -5,3 +5,8 @@ function getComputerChoice() {
     return rockPaperScissor[randomNumber];
 }
 
+function getHumanChoice() {
+    let humanChoice = prompt("Please choose Rock, Paper, or Scissors.")
+    return humanChoice;
+}
+

@@ -57,3 +57,23 @@ function playRound(computerChoice, humanChoice) {
 }
 }
 
+
+function playGame() {
+let rounds = 5;
+
+for (i = rounds; rounds > 0; rounds--)
+    playRound(getComputerChoice(), getHumanChoice())
+    console.log("* Humans Score - " + humanScore);
+    console.log("* Computer Score - " + computerScore);
+    if (humanScore > computerScore) {
+        console.log("Human Wins Congratultions!!")
+    }
+    else if (humanScore < computerScore) {
+        console.log("Computer Wins Better Luck Next Time!!")
+    }
+    else {
+        console.log("Human And Computer Tied!!")
+    }
+}
+
+playGame();

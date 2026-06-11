@@ -4,15 +4,16 @@ function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
     return rockPaperScissor[randomNumber];
 }
-
+// A function to prompt the user for a choice.
 function getHumanChoice() {
     let humanChoice = prompt("Please choose Rock, Paper, or Scissors.")
     return humanChoice;
 }
-
+// Global score variables
 let humanScore = 0;
 let computerScore = 0;
 
+// Function for a single round of Rock Paper Scissors
 function playRound(computerChoice, humanChoice) {
     humanChoice = humanChoice.toLowerCase();
     if (computerChoice === "Rock") {
@@ -57,7 +58,7 @@ function playRound(computerChoice, humanChoice) {
 }
 }
 
-
+// Function to play 5 rounds of Rock Paper Scissors
 function playGame() {
 let rounds = 5;
 

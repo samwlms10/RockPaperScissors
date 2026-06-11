@@ -9,7 +9,10 @@ function getHumanChoice() {
     let humanChoice = prompt("Please choose Rock, Paper, or Scissors.")
     return humanChoice;
 }
-// Global score variables
+
+
+// Function to play 5 rounds of Rock Paper Scissors
+function playGame() {
 let humanScore = 0;
 let computerScore = 0;
 
@@ -17,7 +20,6 @@ let computerScore = 0;
 function playRound(computerChoice, humanChoice) {
     humanChoice = humanChoice.toLowerCase();
     if (computerChoice === "Rock") {
-        console.log(computerChoice)
         if (humanChoice == "rock") {
             console.log("You both chose Rock, its a tie!");
         }
@@ -29,7 +31,7 @@ function playRound(computerChoice, humanChoice) {
             console.log("Computer: Rock!  Human: Scissors! Computer wins!");
             computerScore++
         }
-}
+    }
     if (computerChoice === "Paper") {
         if (humanChoice == "rock") {
             console.log("Computer: Paper!  Human: Rock! Computer wins!");
@@ -42,7 +44,7 @@ function playRound(computerChoice, humanChoice) {
             console.log("Computer: Paper!  Human: Scissors! Human wins!");
             humanScore++
         }
-}
+    }
     if (computerChoice === "Scissors") {
         if (humanChoice == "rock") {
             console.log("Computer: Scissors!  Human: Rock! Human wins!");
@@ -55,19 +57,16 @@ function playRound(computerChoice, humanChoice) {
         else {
             console.log("You both chose Scissors, its a tie!");
         }
-}
+    }
 }
 
-// Function to play 5 rounds of Rock Paper Scissors
-function playGame() {
-let rounds = 5;
-
-for (i = rounds; rounds > 0; rounds--)
+for (let rounds = 5; rounds > 0; rounds--) {
     playRound(getComputerChoice(), getHumanChoice())
+}
     console.log("* Humans Score - " + humanScore);
     console.log("* Computer Score - " + computerScore);
     if (humanScore > computerScore) {
-        console.log("Human Wins Congratultions!!")
+        console.log("Human Wins Congratulations!!")
     }
     else if (humanScore < computerScore) {
         console.log("Computer Wins Better Luck Next Time!!")
